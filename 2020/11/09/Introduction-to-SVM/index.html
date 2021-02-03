@@ -229,7 +229,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"></head>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.3.0"></head>
 
     
         <body class="post-body">
@@ -535,14 +535,11 @@ b^{*}=y_{j}-\sum_{i=1}^{N} \alpha_{i}^{*}\left(y_{i} x_{i} \cdot x_{j}\right)</s
 <p>环境：Python 3.8.5，scikit-learn 0.23.2，Ubuntu 20.04</p>
 <p><code>binary_classification.py</code>：<br>基于Iris数据集中Setosa和Versicolour的数据作二分类，特征使用萼片(sepal)的宽度和长度，目标是分成Setosa和Versicolour两个类别。<br>关键代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 150x4 iris datasets</span><br><span class="line">iris &#x3D; datasets.load_iris()</span><br><span class="line">X &#x3D; iris.data[:, :2]</span><br><span class="line">y &#x3D; iris.target</span><br><span class="line"></span><br><span class="line"># only select Setosa and Versicolour</span><br><span class="line"># to conduct binary classfication</span><br><span class="line">selected &#x3D; (y &#x3D;&#x3D; 0) | (y &#x3D;&#x3D; 1)</span><br><span class="line">X &#x3D; X[selected]</span><br><span class="line">y &#x3D; y[selected]</span><br><span class="line"></span><br><span class="line"># SVM Classifier model</span><br><span class="line">bi_clf &#x3D; SVC(kernel&#x3D;&quot;linear&quot;, C&#x3D;float(&quot;inf&quot;))</span><br><span class="line">bi_clf.fit(X, y)</span><br></pre></td></tr></table></figure><br>以下是模型拟合后的示意图：（绿色高亮的点即是支持向量）<br><img src="/images/Introduction-to-SVM/binary_classification.png" alt="binary_classification"> </p>
 <p><code>multi_classification.py</code>：<br>基于Iris数据集作多分类，一对一策略。特征仍是二维的，仍使用萼片(sepal)的宽度和长度，目标则是分成Setosa，Versicolour和Virginica三个类别。</p>
-<p>关键代码与<code>binary_classification.py</code>类似：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># SVM Classifier model</span><br><span class="line"># one-versus-one strategy</span><br><span class="line">multi_clf &#x3D; SVC(kernel&#x3D;&quot;linear&quot;, decision_function_shape&#x3D;&#39;ovo&#39;)</span><br><span class="line">multi_clf.fit(X, y)</span><br></pre></td></tr></table></figure></p>
-<p>以下是模型拟合后的示意图：<br><img src="/images/Introduction-to-SVM/multi_classification.png" alt="multi_classification"> </p>
+<p>关键代码与<code>binary_classification.py</code>类似：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># SVM Classifier model</span><br><span class="line"># one-versus-one strategy</span><br><span class="line">multi_clf &#x3D; SVC(kernel&#x3D;&quot;linear&quot;, decision_function_shape&#x3D;&#39;ovo&#39;)</span><br><span class="line">multi_clf.fit(X, y)</span><br></pre></td></tr></table></figure><br>以下是模型拟合后的示意图：<br><img src="/images/Introduction-to-SVM/multi_classification.png" alt="multi_classification"> </p>
 <p><code>rbf_kernel.py</code>：<br>RBF核函数解决线性可分问题。使用了多一维的特征-花瓣(petal)的长度，目标是Versicolour和Virginica两个类别。</p>
-<p>关键代码：（需要额外使用mplot3d库来绘制三维图像）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">from mpl_toolkits.mplot3d.art3d import Poly3DCollection</span><br><span class="line">from mpl_toolkits import mplot3d</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"># 150x4 iris datasets</span><br><span class="line">iris &#x3D; datasets.load_iris()</span><br><span class="line">X &#x3D; iris.data[:, :3]</span><br><span class="line">y &#x3D; iris.target</span><br><span class="line"></span><br><span class="line">selected &#x3D; (y &#x3D;&#x3D; 1) | (y &#x3D;&#x3D; 2)</span><br><span class="line">X &#x3D; X[selected]</span><br><span class="line">y &#x3D; y[selected]</span><br><span class="line"></span><br><span class="line">ax &#x3D; plt.axes(projection&#x3D;&#39;3d&#39;)</span><br><span class="line">ax.plot3D(X[:, 0][y&#x3D;&#x3D;1], X[:, 1][y&#x3D;&#x3D;1], X[:, 2][y&#x3D;&#x3D;1], &quot;ro&quot;)</span><br><span class="line">ax.plot3D(X[:, 0][y&#x3D;&#x3D;2], X[:, 1][y&#x3D;&#x3D;2], X[:, 2][y&#x3D;&#x3D;2], &quot;bs&quot;)</span><br><span class="line">ax.set_xlabel(&quot;sepal length&quot;)</span><br><span class="line">ax.set_ylabel(&quot;sepal width&quot;)</span><br><span class="line">ax.set_zlabel(&quot;petal length&quot;)</span><br><span class="line"></span><br><span class="line"># SVM Classifier model</span><br><span class="line">rbf_clf &#x3D; SVC(kernel&#x3D;&quot;rbf&quot;)</span><br><span class="line">rbf_clf.fit(X, y)</span><br></pre></td></tr></table></figure></p>
-<p>以下是模型拟合后的示意图：<br><img src="/images/Introduction-to-SVM/rbf_kernel.png" alt="rbf_kernel"> </p>
+<p>关键代码：（需要额外使用mplot3d库来绘制三维图像）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">from mpl_toolkits.mplot3d.art3d import Poly3DCollection</span><br><span class="line">from mpl_toolkits import mplot3d</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"># 150x4 iris datasets</span><br><span class="line">iris &#x3D; datasets.load_iris()</span><br><span class="line">X &#x3D; iris.data[:, :3]</span><br><span class="line">y &#x3D; iris.target</span><br><span class="line"></span><br><span class="line">selected &#x3D; (y &#x3D;&#x3D; 1) | (y &#x3D;&#x3D; 2)</span><br><span class="line">X &#x3D; X[selected]</span><br><span class="line">y &#x3D; y[selected]</span><br><span class="line"></span><br><span class="line">ax &#x3D; plt.axes(projection&#x3D;&#39;3d&#39;)</span><br><span class="line">ax.plot3D(X[:, 0][y&#x3D;&#x3D;1], X[:, 1][y&#x3D;&#x3D;1], X[:, 2][y&#x3D;&#x3D;1], &quot;ro&quot;)</span><br><span class="line">ax.plot3D(X[:, 0][y&#x3D;&#x3D;2], X[:, 1][y&#x3D;&#x3D;2], X[:, 2][y&#x3D;&#x3D;2], &quot;bs&quot;)</span><br><span class="line">ax.set_xlabel(&quot;sepal length&quot;)</span><br><span class="line">ax.set_ylabel(&quot;sepal width&quot;)</span><br><span class="line">ax.set_zlabel(&quot;petal length&quot;)</span><br><span class="line"></span><br><span class="line"># SVM Classifier model</span><br><span class="line">rbf_clf &#x3D; SVC(kernel&#x3D;&quot;rbf&quot;)</span><br><span class="line">rbf_clf.fit(X, y)</span><br></pre></td></tr></table></figure><br>以下是模型拟合后的示意图：<br><img src="/images/Introduction-to-SVM/rbf_kernel.png" alt="rbf_kernel"> </p>
 <p><code>non_linear.py</code>：<br>使用RBF核函数，训练拟合线性不可分的异或函数。</p>
-<p>关键代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># generate random xor datasets</span><br><span class="line">X &#x3D; np.random.randn(150, 2)</span><br><span class="line">y &#x3D; np.logical_xor(X[:, 0] &gt; 0, X[:, 1] &gt; 0)</span><br><span class="line"></span><br><span class="line"># SVM Classifier model</span><br><span class="line">non_linear_clf &#x3D; SVC(kernel&#x3D;&quot;rbf&quot;)</span><br><span class="line">non_linear_clf.fit(X, y)</span><br></pre></td></tr></table></figure></p>
-<p>以下是模型拟合后的示意图：<br><img src="/images/Introduction-to-SVM/non_linear.png" alt="non_linear"> </p>
+<p>关键代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># generate random xor datasets</span><br><span class="line">X &#x3D; np.random.randn(150, 2)</span><br><span class="line">y &#x3D; np.logical_xor(X[:, 0] &gt; 0, X[:, 1] &gt; 0)</span><br><span class="line"></span><br><span class="line"># SVM Classifier model</span><br><span class="line">non_linear_clf &#x3D; SVC(kernel&#x3D;&quot;rbf&quot;)</span><br><span class="line">non_linear_clf.fit(X, y)</span><br></pre></td></tr></table></figure><br>以下是模型拟合后的示意图：<br><img src="/images/Introduction-to-SVM/non_linear.png" alt="non_linear"> </p>
 <h2 id="6-参考文献"><a href="#6-参考文献" class="headerlink" title="6.参考文献"></a>6.参考文献</h2><blockquote>
 <p>[1] CristianintNello. An introduction to support vector machines and other kernel-based learning methods[J]. 2000.  </p>
 <p>[2] 李航. 统计学习方法[M]. 清华大学出版社, 2012.  </p>
@@ -564,6 +561,11 @@ b^{*}=y_{j}-\sum_{i=1}^{N} \alpha_{i}^{*}\left(y_{i} x_{i} \cdot x_{j}\right)</s
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2021/02/03/%E4%BA%86%E8%A7%A3SpringBoot/" title= "了解SpringBoot">
+                    <div class="nextTitle">了解SpringBoot</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -712,9 +714,16 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 1
+        Total : 2
         </div>
         <!-- search  -->
         
@@ -724,6 +733,20 @@ top:50vh;
     
     
     
+    
+    <div class="archive-year"> 2021 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/03</span><a class="archive-post-title" href= "/2021/02/03/%E4%BA%86%E8%A7%A3SpringBoot/" >了解SpringBoot</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
@@ -741,6 +764,10 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="ML"><span class="iconfont-archer">&#xe606;</span>ML</span>
     
         <span class="sidebar-tag-name" data-tags="SVM"><span class="iconfont-archer">&#xe606;</span>SVM</span>
+    
+        <span class="sidebar-tag-name" data-tags="Java"><span class="iconfont-archer">&#xe606;</span>Java</span>
+    
+        <span class="sidebar-tag-name" data-tags="Spring"><span class="iconfont-archer">&#xe606;</span>Spring</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -776,6 +803,8 @@ jsonContent:
     <div class="sidebar-categories-name">
     
         <span class="sidebar-category-name" data-categories="ML"><span class="iconfont-archer">&#xe60a;</span>ML</span>
+    
+        <span class="sidebar-category-name" data-categories="Java"><span class="iconfont-archer">&#xe60a;</span>Java</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
