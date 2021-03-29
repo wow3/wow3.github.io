@@ -20,17 +20,27 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://wow3.tech/categories/ML/index.html">
+    <meta name="description" content="Lecture 1.2:  Hash Pointers and Data Structures">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cryptocurrency_by_Princeton[1.2]">
+<meta property="og:url" content="http://wow3.tech/2021/03/29/Cryptocurrency-by-Princeton-1-2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Lecture 1.2:  Hash Pointers and Data Structures">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-1-2/image-20210319165916156.png">
+<meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-1-2/image-20210319170621720.png">
+<meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-1-2/image-20210319170825845.png">
+<meta property="article:published_time" content="2021-03-29T14:53:10.000Z">
+<meta property="article:modified_time" content="2021-03-29T14:58:27.005Z">
 <meta property="article:author" content="twowd">
+<meta property="article:tag" content="Blockchain">
+<meta property="article:tag" content="Cryptocurrency">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-1-2/image-20210319165916156.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>Wow&#39;s Studio</title>
+    <title>Cryptocurrency_by_Princeton[1.2] · Wow&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -215,12 +225,23 @@
 <!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.3.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >wow&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Cryptocurrency_by_Princeton[1.2]</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>wow's Studio.</a>
 </header>
@@ -232,24 +253,76 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://source.unsplash.com/random?wallpapers/1920x1080)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Cryptocurrency_by_Princeton[1.2]
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Blockchain">Blockchain</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Cryptocurrency">Cryptocurrency</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">150</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2021/03/29</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -350,43 +423,67 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/11/09/Introduction-to-SVM/" >
-            
-                <span>SVM导论</span>
-        </a>
-        <div class="abstract-content">
-            <blockquote>
-<p>Introduction to Support Vector Machines</p>
+            <main class="main post-page">
+    <article class="article-entry">
+        <blockquote>
+<p>Lecture 1.2:  Hash Pointers and Data Structures</p>
 </blockquote>
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/09</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "ML">ML</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SVM">SVM</a>
-    
-</div>
-            
-        </div>
+<a id="more"></a>
+<h2 id="block-chain"><a href="#block-chain" class="headerlink" title="block chain:"></a>block chain:</h2><p>Have a series of blocks, </p>
+<p>each block has data as well as a pointer to the previous block in ths list,</p>
+<p>here the previous block pointer will be replaced with a hash pointer.</p>
+<p>If the adversary wants to tamper with data anywhere in this entire chain, in order to keep the story consistent, he’s going to have to tamper with hash pointers all the way back to the beginning.</p>
+<p><img src="/images/Cryptocurrency-by-Princeton-1-2/image-20210319165916156.png" alt="image-20210319165916156" style="zoom: 33%;" /></p>
+<p><br/></p>
+<h2 id="Merkle-tree"><a href="#Merkle-tree" class="headerlink" title="Merkle tree"></a>Merkle tree</h2><p>Binary tree with hash pointers</p>
+<p><img src="/images/Cryptocurrency-by-Princeton-1-2/image-20210319170621720.png" alt="image-20210319170621720" style="zoom: 50%;" /></p>
+<p>In this case, if someone wants to prove to us that a particular data block is a member of this Merkle tree, all they need to show us, is this amount of data:</p>
+<p><img src="/images/Cryptocurrency-by-Princeton-1-2/image-20210319170825845.png" alt="image-20210319170825845" style="zoom:33%;" /></p>
+<p>it takes about $log(n)$ time for us to verify it. It means that we can verify proven membership in a relatively short time at a very large number of blocks.</p>
+
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>Author：<a href="http://wow3.tech">twowd</a>
+            <p>原文链接：<a href="http://wow3.tech/2021/03/29/Cryptocurrency-by-Princeton-1-2/">http://wow3.tech/2021/03/29/Cryptocurrency-by-Princeton-1-2/</a>
+            <p>发表日期：<a href="http://wow3.tech/2021/03/29/Cryptocurrency-by-Princeton-1-2/">March 29th 2021, 10:53:10 pm</a>
+            <p>更新日期：<a href="http://wow3.tech/2021/03/29/Cryptocurrency-by-Princeton-1-2/">March 29th 2021, 10:58:27 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2021/03/29/Cryptocurrency-by-Princeton-1-1/" title= "Cryptocurrency by Princeton[1.1]">
+                    <div class="prevTitle">Cryptocurrency by Princeton[1.1]</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -471,6 +568,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#block-chain"><span class="toc-text">block chain:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Merkle-tree"><span class="toc-text">Merkle tree</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -667,6 +782,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
