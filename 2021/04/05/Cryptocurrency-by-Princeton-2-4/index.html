@@ -30,8 +30,9 @@
 <meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-2-4/image-20210405145813542.png">
 <meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-2-4/image-20210405150602955.png">
 <meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-2-4/image-20210405153718462.png">
+<meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-2-4/image-20210405155805619.png">
 <meta property="article:published_time" content="2021-04-05T06:48:14.000Z">
-<meta property="article:modified_time" content="2021-04-05T07:56:31.523Z">
+<meta property="article:modified_time" content="2021-04-05T07:58:13.210Z">
 <meta property="article:author" content="twowd">
 <meta property="article:tag" content="Blockchain">
 <meta property="article:tag" content="Cryptocurrency">
@@ -296,7 +297,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">475</span>Reading time: <span class="post-count reading-time">2 min</span></span>
+                        <span>Word count: <span class="post-count word-count">474</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -485,7 +486,7 @@ height:50vh;
 <h3 id="Key-security-assumption"><a href="#Key-security-assumption" class="headerlink" title="Key security assumption"></a>Key security assumption</h3><p>Attack infeasible if majority of miners weighted by hash power follow the protocol.  </p>
 <p><br/></p>
 <h3 id="Solving-hash-puzzles-is-probabilistic"><a href="#Solving-hash-puzzles-is-probabilistic" class="headerlink" title="Solving hash puzzles is probabilistic"></a>Solving hash puzzles is probabilistic</h3><p>Bernouli trials, approximated by a continuous probability process:  </p>
-<p>[img]</p>
+<p><img src="/images/Cryptocurrency-by-Princeton-2-4/image-20210405155805619.png" alt="image-20210405155805619" style="zoom:50%;" /></p>
 <p>Overall, the network automatically adjusts the difficulty so that the inter block time is maintained at an average long-term of 10 minutes.  </p>
 <p>For indicidual miner:  </p>
 <p><code>mean time to find block = 10 minutes / fraction of hash power</code>  </p>
@@ -501,7 +502,7 @@ height:50vh;
             <p>Author：<a href="http://wow3.tech">twowd</a>
             <p>原文链接：<a href="http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/">http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/</a>
             <p>发表日期：<a href="http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/">April 5th 2021, 2:48:14 pm</a>
-            <p>更新日期：<a href="http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/">April 5th 2021, 3:56:31 pm</a>
+            <p>更新日期：<a href="http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/">April 5th 2021, 3:58:13 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -954,7 +955,22 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
 
 
