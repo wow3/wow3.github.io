@@ -20,26 +20,27 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Introduction to neural network and deep learning">
+    <meta name="description" content="Lecture 2.4:  Incentives and proof of work">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Deep Learning by Andrew Ng (1)">
-<meta property="og:url" content="http://wow3.tech/2021/02/09/Deep-Learning-by-Andrew-Ng-1/index.html">
+<meta property="og:title" content="Cryptocurrency by Princeton[2.4]">
+<meta property="og:url" content="http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Introduction to neural network and deep learning">
+<meta property="og:description" content="Lecture 2.4:  Incentives and proof of work">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://wow3.tech/images/Deep-Learning-by-Andrew-Ng-1/image-20210209180408566.png">
-<meta property="og:image" content="http://wow3.tech/images/Deep-Learning-by-Andrew-Ng-1/image-20210209182026041.png">
-<meta property="og:image" content="http://wow3.tech/images/Deep-Learning-by-Andrew-Ng-1/image-20210209182131518.png">
-<meta property="article:published_time" content="2021-02-09T06:21:11.000Z">
-<meta property="article:modified_time" content="2021-02-09T10:23:42.032Z">
+<meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-2-4/image-20210405145813542.png">
+<meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-2-4/image-20210405150602955.png">
+<meta property="og:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-2-4/image-20210405153718462.png">
+<meta property="article:published_time" content="2021-04-05T06:48:14.000Z">
+<meta property="article:modified_time" content="2021-04-05T07:56:31.523Z">
 <meta property="article:author" content="twowd">
-<meta property="article:tag" content="DL">
+<meta property="article:tag" content="Blockchain">
+<meta property="article:tag" content="Cryptocurrency">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://wow3.tech/images/Deep-Learning-by-Andrew-Ng-1/image-20210209180408566.png">
+<meta name="twitter:image" content="http://wow3.tech/images/Cryptocurrency-by-Princeton-2-4/image-20210405145813542.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>Deep Learning by Andrew Ng (1) · Wow&#39;s Studio</title>
+    <title>Cryptocurrency by Princeton[2.4] · Wow&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -238,7 +239,7 @@
                 <a href="/" >wow&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Deep Learning by Andrew Ng (1)</a>
+                <a href="#" class="post-name">Cryptocurrency by Princeton[2.4]</a>
             </div>
     </div>
     
@@ -268,7 +269,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Deep Learning by Andrew Ng (1)
+            Cryptocurrency by Princeton[2.4]
             <!-- 404 -->
             
         </h1>
@@ -287,18 +288,20 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "DL">DL</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Blockchain">Blockchain</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Cryptocurrency">Cryptocurrency</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">83</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">475</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2021/02/09</span>
+                    <span class="post-intro-time">2021/04/05</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -423,31 +426,82 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <blockquote>
-<p>Introduction to neural network and deep learning  </p>
+<p>Lecture 2.4:  Incentives and proof of work    </p>
 </blockquote>
 <a id="more"></a>
-<h2 id="1-What-is-a-neural-network"><a href="#1-What-is-a-neural-network" class="headerlink" title="1. What is a neural network?"></a>1. What is a neural network?</h2><p>some keywords here:  </p>
+<h3 id="Assumption-of-honesty-is-problematic"><a href="#Assumption-of-honesty-is-problematic" class="headerlink" title="Assumption of honesty is problematic"></a>Assumption of honesty is problematic</h3><p>Can we give nodes <strong>incentives</strong> for behaving honestly?  </p>
+<p><img src="/images/Cryptocurrency-by-Princeton-2-4/image-20210405145813542.png" alt="image-20210405145813542"></p>
+<p>Everything so far is just a distributed consensus protocol, but now we utilize the fact that the currency has value.  </p>
+<p><br/></p>
+<hr>
+<h3 id="Incentive-1-block-reward"><a href="#Incentive-1-block-reward" class="headerlink" title="Incentive 1: block reward"></a>Incentive 1: block reward</h3><p>Creator of block gets to </p>
 <ul>
-<li>prediction model  </li>
-<li>neuron(function)  </li>
+<li>include special coin-creation transaction in the block;</li>
+<li>choose recipient address of this transaction;</li>
 </ul>
-<p>example: <strong>Housing Price Prediction</strong>  </p>
-<p><img src="/images/Deep-Learning-by-Andrew-Ng-1/image-20210209180408566.png" alt="image-20210209180408566"></p>
-<p>In this case, there are 4 input features. And given these input features, the job of neural network is to predict the price <script type="math/tex">y</script>.   </p>
-<p>With enough data of <script type="math/tex">x</script> and <script type="math/tex">y</script>, neural network is remarkably good at figuring out functions that accurately map from <script type="math/tex">x</script> to <script type="math/tex">y</script>.  </p>
-<h2 id="2-Supervised-Learning-with-Neural-Networks"><a href="#2-Supervised-Learning-with-Neural-Networks" class="headerlink" title="2. Supervised Learning with Neural Networks"></a>2. Supervised Learning with Neural Networks</h2><p>Application examples:  </p>
-<p><img src="/images/Deep-Learning-by-Andrew-Ng-1/image-20210209182026041.png" alt="image-20210209182026041"></p>
-<p>Standard NN, CNN and RNN:  </p>
-<p><img src="/images/Deep-Learning-by-Andrew-Ng-1/image-20210209182131518.png" alt="image-20210209182131518"></p>
+<p>Value is fixed: currency 25 BTC, halves every 4 years.  </p>
+<p>Block creator gets to “collect” the reward only if the block ends up on long-term consensus branch.(It incentivizes nodes to behave in a way that they think other nodes are going to agree with in creating the next block of the block chain)  </p>
+<p><br/></p>
+<h3 id="There’s-a-finite-supply-of-bitcoins"><a href="#There’s-a-finite-supply-of-bitcoins" class="headerlink" title="There’s  a finite supply of bitcoins"></a>There’s  a finite supply of bitcoins</h3><p>Here is the total number of bitcoins in circulation:  </p>
+<p><img src="/images/Cryptocurrency-by-Princeton-2-4/image-20210405150602955.png" alt="image-20210405150602955"></p>
+<p>Worth noting that this is the only way in which new bitcoins are created, there is no other coin generation mechanism, so this new block creation reward is actually gonna run out.  </p>
+<p>So does it sound a bit weird? Does that mean that system will stop working and become insecure because nodes no longer have the incentive to bahave honestly? —— There is quite another incentive mechanism.  </p>
+<p><br/></p>
+<hr>
+<h3 id="Incentive-2-transaction-fees"><a href="#Incentive-2-transaction-fees" class="headerlink" title="Incentive 2: transaction fees"></a>Incentive 2: transaction fees</h3><p>Creator of transaction ca choose to make output value less than input value;  </p>
+<p>Remainder is a transaction fee and goes to block creator;  </p>
+<p>Purely voluntary, like a tip;</p>
+<p><br/></p>
+<p><strong>Remaining problems</strong>:  </p>
+<ol>
+<li>How to pick a random node?</li>
+<li>How to avoid a free-for-all due to rewards?</li>
+<li>How to prevent Sybil attacks?</li>
+</ol>
+<p>It turns out that all these problems are related, and all of them have the same solution.  </p>
+<p>And that solution is called <strong>Proof of Work</strong>.  </p>
+<p><br/></p>
+<hr>
+<h3 id="Proof-of-Work"><a href="#Proof-of-Work" class="headerlink" title="Proof of Work"></a>Proof of Work</h3><p>Instead of picking a random node.  </p>
+<p>To approximate selecting a random node:    </p>
+<p>select nodes in proportion to a resource that no one can monopolize.</p>
+<ul>
+<li>In proportion to computing power: proof-of-work</li>
+<li>In proportion to ownership: proof-of-stake  </li>
+</ul>
+<p><br/></p>
+<h3 id="Equivalent-views-of-proof-of-work"><a href="#Equivalent-views-of-proof-of-work" class="headerlink" title="Equivalent views of proof of work"></a>Equivalent views of proof of work</h3><ol>
+<li>Select nodes in proportion to computing power;</li>
+<li>Let nodes compete for right to create block;</li>
+<li>Make it moderately hard to create new identities;</li>
+</ol>
+<p><br/></p>
+<h3 id="Hash-puzzles"><a href="#Hash-puzzles" class="headerlink" title="Hash puzzles"></a>Hash puzzles</h3><p><img src="/images/Cryptocurrency-by-Princeton-2-4/image-20210405153718462.png" alt="image-20210405153718462"></p>
+<p><br/></p>
+<h3 id="PoW-property-1-difficult-to-compute"><a href="#PoW-property-1-difficult-to-compute" class="headerlink" title="PoW property 1: difficult to compute"></a>PoW property 1: difficult to compute</h3><h3 id="PoW-property-2-parameterizable-cost"><a href="#PoW-property-2-parameterizable-cost" class="headerlink" title="PoW property 2: parameterizable cost"></a>PoW property 2: parameterizable cost</h3><p>Nodes  automatically re-calculate the target every two weeks  </p>
+<p>Goal: average time between blocks = 10 minutes  </p>
+<p><code>Prob(Alice wins next block) = fraction of blobal hash power she controls</code>  </p>
+<p><br/></p>
+<h3 id="Key-security-assumption"><a href="#Key-security-assumption" class="headerlink" title="Key security assumption"></a>Key security assumption</h3><p>Attack infeasible if majority of miners weighted by hash power follow the protocol.  </p>
+<p><br/></p>
+<h3 id="Solving-hash-puzzles-is-probabilistic"><a href="#Solving-hash-puzzles-is-probabilistic" class="headerlink" title="Solving hash puzzles is probabilistic"></a>Solving hash puzzles is probabilistic</h3><p>Bernouli trials, approximated by a continuous probability process:  </p>
+<p>[img]</p>
+<p>Overall, the network automatically adjusts the difficulty so that the inter block time is maintained at an average long-term of 10 minutes.  </p>
+<p>For indicidual miner:  </p>
+<p><code>mean time to find block = 10 minutes / fraction of hash power</code>  </p>
+<p><br/></p>
+<h3 id="PoW-property-3-trival-to-verify"><a href="#PoW-property-3-trival-to-verify" class="headerlink" title="PoW property 3: trival to verify"></a>PoW property 3: trival to verify</h3><p>Nonce must br published as part of block  </p>
+<p>Other miners simply verify that <code>H(nonce || prev_hash || tx || ... ) &lt; target</code></p>
+<p><br/></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>Author：<a href="http://wow3.tech">twowd</a>
-            <p>原文链接：<a href="http://wow3.tech/2021/02/09/Deep-Learning-by-Andrew-Ng-1/">http://wow3.tech/2021/02/09/Deep-Learning-by-Andrew-Ng-1/</a>
-            <p>发表日期：<a href="http://wow3.tech/2021/02/09/Deep-Learning-by-Andrew-Ng-1/">February 9th 2021, 2:21:11 pm</a>
-            <p>更新日期：<a href="http://wow3.tech/2021/02/09/Deep-Learning-by-Andrew-Ng-1/">February 9th 2021, 6:23:42 pm</a>
+            <p>原文链接：<a href="http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/">http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/</a>
+            <p>发表日期：<a href="http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/">April 5th 2021, 2:48:14 pm</a>
+            <p>更新日期：<a href="http://wow3.tech/2021/04/05/Cryptocurrency-by-Princeton-2-4/">April 5th 2021, 3:56:31 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -455,17 +509,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2021/03/04/Deep-Learning-by-Andrew-Ng-2/" title= "Deep Learning by Andrew Ng (2)">
-                    <div class="nextTitle">Deep Learning by Andrew Ng (2)</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/11/09/Introduction-to-SVM/" title= "SVM导论">
-                    <div class="prevTitle">SVM导论</div>
+                <a href= "/2021/04/04/Cryptocurrency-by-Princeton-2-3/" title= "Cryptocurrency by Princeton[2.3]">
+                    <div class="prevTitle">Cryptocurrency by Princeton[2.3]</div>
                 </a>
             
         </li>
@@ -588,7 +637,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-What-is-a-neural-network"><span class="toc-text">1. What is a neural network?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Supervised-Learning-with-Neural-Networks"><span class="toc-text">2. Supervised Learning with Neural Networks</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Assumption-of-honesty-is-problematic"><span class="toc-text">Assumption of honesty is problematic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Incentive-1-block-reward"><span class="toc-text">Incentive 1: block reward</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#There%E2%80%99s-a-finite-supply-of-bitcoins"><span class="toc-text">There’s  a finite supply of bitcoins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Incentive-2-transaction-fees"><span class="toc-text">Incentive 2: transaction fees</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Proof-of-Work"><span class="toc-text">Proof of Work</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Equivalent-views-of-proof-of-work"><span class="toc-text">Equivalent views of proof of work</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hash-puzzles"><span class="toc-text">Hash puzzles</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PoW-property-1-difficult-to-compute"><span class="toc-text">PoW property 1: difficult to compute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PoW-property-2-parameterizable-cost"><span class="toc-text">PoW property 2: parameterizable cost</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Key-security-assumption"><span class="toc-text">Key security assumption</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Solving-hash-puzzles-is-probabilistic"><span class="toc-text">Solving hash puzzles is probabilistic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PoW-property-3-trival-to-verify"><span class="toc-text">PoW property 3: trival to verify</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
