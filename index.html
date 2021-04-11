@@ -380,7 +380,21 @@ height:50vh;
 为什么出现？产品的开发和上线，两套环境。  
 环境配置费时费力。。。  
 Docker提供的解决方案：集装箱  
-##
+为什么流行？轻巧的虚拟化技术（相对于VM）  
+
+VM： 原生镜像，隔离需要开启多个虚拟机，几个G，几分钟；
+
+虚拟硬件，运行完整的操作系统，然后在这个操作系统上安装运行软件。
+
+docker： 镜像只包含最核心的环境，几个M，秒级启动；
+
+容器内的应用运行在宿主os，容器没有自己的内核，也不虚拟化自己的硬件。每个容器之间相互隔离，都有自己的文件系统，互不影响。
+Docker安装
+基本组成
+镜像（image）
+
+类似模板，可以通过这个模板创建容器服务；
+通过一个镜像可以...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -1227,22 +1241,7 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+    </body>
 </html>
 
 
